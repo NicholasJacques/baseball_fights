@@ -5,3 +5,4 @@
   <%= @fight.date_occurred.strftime("%B %d, %Y") %><br/>
   <%= @fight.description %>
 </p>
+<%= link_to "Edit", edit_fight_path(@fight) %>

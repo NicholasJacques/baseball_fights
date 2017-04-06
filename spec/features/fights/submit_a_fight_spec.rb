@@ -4,7 +4,7 @@ RSpec.describe "as a user" do
   context "valid form input" do
     it "creates a fight" do
       visit new_fight_path
-      save_and_open_page
+
       fill_in "fight[embed_url]", with: "https://www.youtube.com/embed/RAWvfKPMlmI"
       fill_in "fight[date_occurred]", with: "16/9/2014"
       fill_in "fight[description]", with: "Benches clear after Yankees retaliate for hbp"

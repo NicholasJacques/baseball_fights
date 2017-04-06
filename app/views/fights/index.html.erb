@@ -1,0 +1,7 @@
+<h1>All Fights</h1>
+
+<ul>
+  <% @fights.each do |fight| %>
+    <li><%= link_to fight.date_occurred.strftime("%B %d, %Y"), fight_path(fight) %>, <%= fight.description %></li>
+  <% end %>
+</ul>
