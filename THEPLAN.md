@@ -9,7 +9,7 @@ Fights belong to team
 
 Build out crud functionality for teams with basic show pages
 
-Teams have attributes: name, city, 
+Teams have attributes: name, city, league, abbreviation
 Team has many fights
 
 ## Iteration 2
