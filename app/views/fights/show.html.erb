@@ -1,0 +1,7 @@
+<h1>Fight!</h1>
+
+<p>
+  <iframe width="640" height="390" src="<%= @fight.embed_url %>" frameborder="0"></iframe><br/>
+  <%= @fight.date_occurred.strftime("%B %d, %Y") %><br/>
+  <%= @fight.description %>
+</p>
