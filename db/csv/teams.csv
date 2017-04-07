@@ -1,0 +1,32 @@
+name,city_state,abbreviation,league
+Angels of Aneheim,Los Angeles,LAA,American
+Diamondbacks,Arizona,ARI,National
+Braves,Atlanta,ATL,National
+Red Sox,Boston,BOS,American
+Cubs,Chicago,CHC,National
+White Sox,Chicago,CHW,American
+Reds,Cincinnati,CIN,National
+Indians,Cleveland,CLE,American
+Rockies,Colorado,COL,National
+Tigers,Detroit,DET,American
+Marlins,Florida,Miami,National
+Royals,Kansas City,KC,American
+Dodgers,Los Angeles,LAD,National
+Brewers,Milwaukee,MIL,National
+Twins,Minnesota,MIN,American
+Expos,Montreal,MTL,National
+Mets,New York,NYM,National
+Yankees,New York,NYY,American
+Athletics,Oakland,OAK,American
+Phillies,Philadelphia,PHI,National
+Pirates,Pittsburgh Pirates,PIT,National
+Padres,San Diego,SD,National
+Mariners,Seattle,SEA,American
+Giants,San Francisco,SF,National
+Cardinals,St. Louis,STL,National
+Rays,Tampa Bay,TB,American
+Rangers,Texas,TEX,American
+Blue Jays,Toronto,TOR,American
+Nationals,Washington,WAS,National
+Orioles,Baltimore,BAL,American
+Astros,Houston,HOU,American
