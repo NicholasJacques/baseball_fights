@@ -7,7 +7,7 @@ RSpec.describe 'view fight path' do
       date_occurred = fight.date_occurred.strftime("%B %d, %Y")
 
       visit fight_path(fight)
-      
+
       expect(page).to have_css("iframe")
       expect(page).to have_content(date_occurred)
       expect(page).to have_content(fight.description)
