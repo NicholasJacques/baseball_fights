@@ -73,5 +73,18 @@ RSpec.describe "team model" do
 
       expect(team).to respond_to(:fights)
     end
+
+    it "fights returns both away fights and home fights" do
+      fight_1 = create(:fight)
+      fight_2 = Fight.create(date_occurred: "16/9/2013",
+                             embed_url: "https://www.youtube.com/watch?v=RAWvfKPMlmI",
+                             description: "Another fight")
+      team = create(:team)
+      
+      fight_1.update(away_team: team)
+      fight_2.update(home_team: team)
+
+      expect(team.fights).to eq([fight_1, fight_2])
+    end
   end
 end
