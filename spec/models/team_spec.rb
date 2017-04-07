@@ -29,8 +29,8 @@ RSpec.describe "team model" do
     end
 
     it "is invalid with a name that already exists" do
-      create(:team)
-      team = Team.new(name: "Red Sox", city: "New York", abbreviation: "NYS" )
+      Team.create(name: "Red Sox", city: "New York", abbreviation: "NYS" )
+      team = Team.new(name: "Red Sox", city: "Boston", abbreviation: "NRL" )
 
       expect(team).to be_invalid
     end
@@ -48,7 +48,7 @@ RSpec.describe "team model" do
     end
 
     it "is invalid with an abbreviation that already exists" do
-      create(:team)
+      Team.create(name: "Red Sox", city: "Boston", abbreviation: "BOS")
       team = Team.new(name: "Yankees", city: "New York", abbreviation: "BOS")
 
       expect(team).to be_invalid
@@ -56,10 +56,22 @@ RSpec.describe "team model" do
   end
 
   context "associations" do
-    it "has fights" do
-     team = create(:team)
+    it "has away fights" do
+      team = create(:team)
 
-     expect(team).to respond_to(:fights)
+      expect(team).to respond_to(:away_fights)
+    end
+
+    it "has home fights" do
+      team = create(:team)
+
+      expect(team).to respond_to(:home_fights)
+    end
+
+    it "has fights" do
+      team = create(:team)
+
+      expect(team).to respond_to(:fights)
     end
   end
 end

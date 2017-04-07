@@ -10,15 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170406185846) do
+ActiveRecord::Schema.define(version: 20170407002739) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "fights", force: :cascade do |t|
-    t.string "embed_url"
-    t.date   "date_occurred"
-    t.text   "description"
+    t.string  "embed_url"
+    t.date    "date_occurred"
+    t.text    "description"
+    t.integer "home_team_id"
+    t.integer "away_team_id"
   end
 
   create_table "teams", force: :cascade do |t|

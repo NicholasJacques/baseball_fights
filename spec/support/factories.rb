@@ -6,8 +6,16 @@ FactoryGirl.define do
   end
 
   factory :team do
-    name "Red Sox"
+    name
     city "Boston"
-    abbreviation "BOS"
+    abbreviation
+  end
+
+  sequence :name do |n|
+    "#{n} Name"
+  end
+
+  sequence :abbreviation do |n|
+    "#{n} abbrev"
   end
 end
