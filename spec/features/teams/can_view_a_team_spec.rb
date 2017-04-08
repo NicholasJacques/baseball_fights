@@ -11,7 +11,7 @@ RSpec.describe 'team view' do
       fight.update(home_team: team_2)
 
       visit team_path(team_1)
-      save_and_open_page
+  
       expect(page).to have_content(team_2.abbreviation)
       expect(page).to have_content(date)
       expect(page).to have_content(description)
