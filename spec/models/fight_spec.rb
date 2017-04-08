@@ -23,15 +23,48 @@ RSpec.describe "fight model" do
 
   context "validations" do
     it "is invalid without an embed_url" do
-      fight = Fight.new(date_occurred: "16/9/2017", description: "This was a fight")
+      fight = build(:fight, embed_url: nil)
 
       expect(fight).to be_invalid
     end
 
     it "is invalid without a date_occurred" do
-      fight = Fight.new(embed_url: "https://www.youtube.com/embed/Pv2N0kK6zbw")
+      fight = build(:fight, date_occurred: nil)
 
       expect(fight).to be_invalid
+    end
+
+    it "is invalid without a home team" do
+      fight = build(:fight, home_team: nil)
+
+      expect(fight).to be_invalid
+    end
+
+    it "is invalid without an away team" do
+      fight = build(:fight, away_team: nil)
+
+      expect(fight).to be_invalid
+    end
+
+    it "is invalid when home team is the same as away_team" do
+      team = create(:team)
+      fight = build(:fight, home_team: team, away_team: team)
+
+      expect(fight).to be_invalid
+    end
+  end
+
+  context "associations" do
+    it "has an away team" do
+      fight = create(:fight)
+
+      expect(fight).to respond_to(:away_team)
+    end
+
+    it "has an away team" do
+      fight = create(:fight)
+
+      expect(fight).to respond_to(:home_team)
     end
   end
 end
