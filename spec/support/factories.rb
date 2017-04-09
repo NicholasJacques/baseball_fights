@@ -20,4 +20,18 @@ FactoryGirl.define do
   sequence :abbreviation do |n|
     "#{n} abbrev"
   end
+
+  factory :default_user, class: User do
+    username "Nick"
+    password "password"
+    email "test@test.com"
+    role 0
+  end
+
+  factory :admin, class: User do
+    username "admin"
+    password "password"
+    email "admin@admin.com"
+    role 1
+  end
 end

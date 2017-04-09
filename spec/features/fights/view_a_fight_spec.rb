@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe 'view fight path' do
-  context "views a fight" do
+  context "view a fight as a guest" do
     it "can see fight stuff" do
       fight = create(:fight)
       date_occurred = fight.date_occurred.strftime("%B %d, %Y")
